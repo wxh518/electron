@@ -10,11 +10,11 @@ const createWindow = () => {
 }
 
 app.whenReady().then(() => {
-    createWindow();
+    createWindow()
     app.on('active', () => {
         if (BrowserWindow.getAllWindows().length === 0)
         {
-            app.quit()
+            createWindow()
         }
     })
 })
